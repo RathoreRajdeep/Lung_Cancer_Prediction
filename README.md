@@ -15,8 +15,8 @@ This solution aligns with advanced AI for healthcare, agentic workflows, and ens
 # 📊 Dataset
 
 **IQ-OTHNCCD Lung Cancer Dataset**  
-Kaggle: https://www.kaggle.com/datasets  
-(Place your specific link here)
+Kaggle Input (Dataset + Images):  
+👉 https://www.kaggle.com/code/lakshyaraj123/notebooka54b91228e/input
 
 - **878 Training Images**
 - **219 Validation Images**
@@ -28,7 +28,7 @@ Preprocessing includes: resize → normalize → augmentation.
 
 # 🧠 System Architecture
 
-### ✔ Version (Final architecture used)
+### ✔ Final Architecture Used
 ![Architecture](assets/Architrcture.png)
 
 ---
@@ -43,7 +43,7 @@ Five pretrained models are used:
 - VGG19  
 - MobileNet  
 
-Each produces a prediction → RL Agent learns weights → Final Ensemble Output.
+Each model independently predicts → RL Agent adjusts weights → Weighted Ensemble → Final Output.
 
 ---
 
@@ -51,7 +51,7 @@ Each produces a prediction → RL Agent learns weights → Final Ensemble Output
 
 ![RL Weights Plot](results/__results___0_3.png)
 
-This graph shows how the RL agent updates weights across training episodes.
+This plot shows how the RL Agent updates model weights during learning, using Q-learning, exploration, and reward-based optimization.
 
 ---
 
@@ -65,7 +65,7 @@ lung-cancer-ensemble-RL/
 ├── requirements.txt
 │
 ├── models/                 <-- EMPTY FOLDER
-│                           <-- Download models from Kaggle notebook
+│                           <-- Download model files from Kaggle
 │
 ├── results/
 │     └── __results___0_3.png
@@ -79,13 +79,13 @@ lung-cancer-ensemble-RL/
 # 📁 Models Folder (IMPORTANT)
 
 ### The `models/` folder is intentionally **EMPTY** in GitHub  
-because `.h5` model files exceed GitHub’s 100MB limit.
+because `.h5` model files exceed GitHub’s 100MB file size limit.
 
 ### ✅ Download All Model Files Here:  
-👉 **[Your Kaggle Notebook Link]**  
-(Place your Kaggle notebook link here)
+👉 **Kaggle Output (All .h5 Model Files):**  
+https://www.kaggle.com/code/lakshyaraj123/notebooka54b91228e/output
 
-The following models must be downloaded:
+### Download these 5 model files:
 
 - `DenseNet201_model.h5`  
 - `EfficientNetB7_model.h5`  
@@ -93,7 +93,7 @@ The following models must be downloaded:
 - `VGG16_model.h5`  
 - `VGG19_model.h5`  
 
-Place them in:
+Place them inside:
 
 ```
 models/
@@ -148,7 +148,7 @@ print(pred)
 | MobileNet        | 97.18%    | 86.76% |
 | VGG19            | 82.07%    | 76.71% |
 
-RL assigns higher weight to better models.
+RL assigns higher weight to better-performing models.
 
 ---
 
@@ -157,11 +157,10 @@ RL assigns higher weight to better models.
 - Grad-CAM explainability  
 - FastAPI/AWS deployment  
 - Integration with agentic medical workflow  
-- LLM-based automatic report generation  
+- LLM-based automatic radiology report generation  
 
 ---
 
 # 👤 Author  
 **Rajdeep Singh Rathore**  
-
 Feel free to fork, report issues, or contribute!
