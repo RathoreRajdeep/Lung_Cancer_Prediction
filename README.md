@@ -1,6 +1,6 @@
 # Lung Cancer Classification using CNN Ensemble + Reinforcement Learning
 
-This project implements a **multi-CNN ensemble system** combined with a **Reinforcement Learning (Q-learning) agent** to classify lung CT images into:
+This project implements a **multi-CNN ensemble system** combined with a **Reinforcement Learning agent** to classify lung CT images into:
 
 - **Benign**
 - **Malignant**
@@ -51,7 +51,7 @@ Each model independently predicts → RL Agent adjusts weights → Weighted Ense
 
 ![RL Weights Plot](results/__results___0_3.png)
 
-This plot shows how the RL Agent updates model weights during learning, using Q-learning, exploration, and reward-based optimization.
+This plot shows how the RL Agent updates model weights during learning, exploration, and reward-based optimization.
 
 ---
 
@@ -108,7 +108,7 @@ models/
 - NumPy  
 - Matplotlib  
 - Scikit-learn  
-- Reinforcement Learning (Q-learning)
+- Reinforcement Learning
 
 ---
 
